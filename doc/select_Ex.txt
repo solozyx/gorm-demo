@@ -1,0 +1,162 @@
+
+use backstage;
+
+select * from bs_product;
+
+mysql> select * from bs_product;
++----+-----------------+---------------+------+----------+-------------+----------+----------------+------------------+--------------+------------+-------------+------------+---------------------+---------------------+---------------------+---------------------+--------------+--------------+--------------+-----------------+---------------+
+| id | organization_id | department_id | name | model_id | clothing_id | scene_id | product_status | pre_audit_status | operate_type | creator_id | operator_id | auditor_id | created_at          | updated_at          | published_at        | pre_published_at    | audit_status | pre_model_id | pre_scene_id | pre_clothing_id | pre_name      |
++----+-----------------+---------------+------+----------+-------------+----------+----------------+------------------+--------------+------------+-------------+------------+---------------------+---------------------+---------------------+---------------------+--------------+--------------+--------------+-----------------+---------------+
+|  1 |               1 |             1 | name |        2 |           2 |        2 |              2 |                2 |            3 |          1 |           1 |          7 | 1970-01-01 00:00:00 | 2020-07-31 14:37:09 | 2020-07-31 10:47:11 | 2020-07-31 10:47:11 |            2 |            2 |            2 |               2 | name          |
+|  2 |               1 |             1 | name |        2 |           2 |        2 |              1 |                2 |            3 |          1 |           1 |          7 | 1970-01-01 00:00:00 | 2020-07-31 14:37:09 | 2020-07-31 10:47:11 | 2020-07-31 10:47:11 |            2 |            2 |            2 |               2 | name          |
+|  3 |               1 |             1 | name |        2 |           2 |        2 |              1 |                2 |            3 |          1 |           1 |          7 | 1970-01-01 00:00:00 | 2020-07-31 14:37:09 | 2020-07-31 10:47:11 | 2020-07-31 10:47:11 |            2 |            2 |            2 |               2 | name          |
+|  4 |               1 |             1 | name |        2 |           2 |        2 |              1 |                2 |            3 |          1 |           1 |          7 | 1970-01-01 00:00:00 | 2020-07-31 14:37:09 | 2020-07-31 10:47:11 | 2020-07-31 10:47:11 |            2 |            2 |            2 |               2 | name          |
+|  5 |               1 |             1 | name |        1 |           1 |        1 |              1 |                1 |            1 |          1 |           1 |          1 | 1970-01-01 00:00:00 | 2020-07-31 10:47:06 | 2020-07-31 10:47:10 | 2020-07-31 10:47:11 |            1 |            2 |            2 |               2 | name          |
+|  6 |               1 |             1 | name |        1 |           1 |        1 |              1 |                1 |            1 |          1 |           1 |          1 | 1970-01-01 00:00:00 | 2020-07-31 10:47:06 | 2020-07-31 10:47:10 | 2020-07-31 10:47:11 |            1 |            1 |            1 |               1 | name          |
+|  7 |               1 |             1 | name |        1 |           1 |        1 |              1 |                1 |            1 |          1 |           1 |          1 | 1970-01-01 00:00:00 | 2020-07-31 10:47:06 | 2020-07-31 10:47:10 | 2020-07-31 10:47:11 |            1 |            1 |            1 |               1 | name          |
+|  8 |               1 |             1 | name |        1 |           1 |        1 |              1 |                1 |            1 |          1 |           1 |          1 | 1970-01-01 00:00:00 | 2020-07-31 10:47:06 | 2020-07-31 10:47:10 | 2020-07-31 10:47:11 |            1 |            1 |            1 |               1 | name          |
+|  9 |               1 |             1 | name |        1 |           1 |        1 |              1 |                1 |            1 |          1 |           1 |          1 | 1970-01-01 00:00:00 | 2020-07-31 10:47:06 | 2020-07-31 10:47:10 | 2020-07-31 10:47:11 |            1 |            1 |            1 |               1 | name          |
+| 10 |               1 |             1 | name |        1 |           1 |        1 |              1 |                1 |            1 |          1 |           1 |          1 | 1970-01-01 00:00:00 | 2020-07-31 10:47:06 | 2020-07-31 10:47:10 | 2020-07-31 10:47:11 |            1 |            1 |            1 |               1 | name          |
+| 12 |               3 |             0 |      |        0 |           0 |        0 |              0 |                1 |            0 |          6 |           0 |          0 | 2020-07-31 13:52:40 | 2020-07-31 13:52:40 | 0000-00-00 00:00:00 | 0000-00-00 00:00:00 |            0 |            1 |            1 |               1 | 新年装扮      |
+| 13 |               3 |             0 |      |        0 |           0 |        0 |              0 |                1 |            0 |          6 |           0 |          0 | 2020-07-31 13:56:41 | 2020-07-31 13:56:41 | 0000-00-00 00:00:00 | 0000-00-00 00:00:00 |            0 |            1 |            1 |               1 | 新年装扮1     |
+| 14 |               3 |             0 |      |        0 |           0 |        0 |              0 |                1 |            0 |          6 |           0 |          0 | 2020-07-31 13:56:55 | 2020-07-31 13:56:55 | 0000-00-00 00:00:00 | 0000-00-00 00:00:00 |            0 |            1 |            1 |               1 | 新年装扮2     |
+| 15 |               3 |             0 |      |        0 |           0 |        0 |              1 |                1 |            1 |          6 |           0 |          0 | 2020-07-31 14:19:40 | 2020-07-31 14:19:40 | 0000-00-00 00:00:00 | 0000-00-00 00:00:00 |            0 |            1 |            1 |               1 | 新年装扮2     |
++----+-----------------+---------------+------+----------+-------------+----------+----------------+------------------+--------------+------------+-------------+------------+---------------------+---------------------+---------------------+---------------------+--------------+--------------+--------------+-----------------+---------------+
+14 rows in set (0.00 sec)
+mysql>
+
+
+mysql> select * from bs_model;
++----+--------+-------------+-------------+-----------------+--------+--------------+---------------------+---------------------+-------------+-----------------+
+| id | name   | image       | contract    | email           | status | description  | created_at          | updated_at          | show_status | organization_id |
++----+--------+-------------+-------------+-----------------+--------+--------------+---------------------+---------------------+-------------+-----------------+
+|  1 | 秒秒   | iimage      | 13333333333 | oben@123        |      1 | desc         | 2020-07-31 10:51:43 | 2020-07-31 10:51:45 |           1 |               0 |
+|  2 | 肖战   | tt1,tt2,tt3 | 13333333333 | obencn@oben.com |      1 | 这是一个     | 2020-07-31 12:21:00 | 2020-07-31 12:21:00 |           0 |               0 |
++----+--------+-------------+-------------+-----------------+--------+--------------+---------------------+---------------------+-------------+-----------------+
+2 rows in set (0.00 sec)
+mysql>
+
+
+mysql> select * from bs_scene;
++----+--------+--------+-------------+------------+--------+-------------+------+---------------------+---------------------+-------------+
+| id | name   | image  | contract    | email      | status | description | type | created_at          | updated_at          | show_status |
++----+--------+--------+-------------+------------+--------+-------------+------+---------------------+---------------------+-------------+
+|  1 | 草原   | iimage | 15689923333 | ooben@.com |      1 | ddesc       |    1 | 2020-07-31 10:59:19 | 2020-07-31 12:26:14 |           1 |
++----+--------+--------+-------------+------------+--------+-------------+------+---------------------+---------------------+-------------+
+1 row in set (0.00 sec)
+mysql>
+
+
+
+mysql> select * from bs_clothing;
++----+-----------+-------+-------------+----------+--------+--------------------+---------------------+---------------------+-------------+-----------------+
+| id | name      | image | contract    | email    | status | description        | created_at          | updated_at          | show_status | organization_id |
++----+-----------+-------+-------------+----------+--------+--------------------+---------------------+---------------------+-------------+-----------------+
+|  1 | 连衣裙    | image | 13333333333 | oben@com |      1 | 好看的连衣裙       | 2020-07-31 10:52:28 | 2020-07-31 10:52:32 |           1 |               0 |
++----+-----------+-------+-------------+----------+--------+--------------------+---------------------+---------------------+-------------+-----------------+
+1 row in set (0.00 sec)
+mysql>
+
+
+
+{"level":"debug","msg":"sign before: POST127.0.0.1:9001/api/v1/mine/login{\"account_no\":\"user1@email.com\",\"password\":\"asdf1234\"}1234567890com.obencn.backstage.c27d32c5-c878-470a-8a6f-107f7d3700dd","source":"head.go:114:middleware.Options","time":"2020-08-05T10:38:17+08:00"}
+{"level":"debug","msg":"server sign: 2c026528727406623b4cdfc7085d11f3, \tuser sign: 2c026528727406623b4cdfc7085d11f3","source":"context.go:161:gin.(*Context).Next","time":"2020-08-05T10:38:17+08:00"}
+{"level":"debug","msg":"request uri=/api/v1/mine/login JWT 不验证token","source":"context.go:161:gin.(*Context).Next","time":"2020-08-05T10:38:17+08:00"}
+{"level":"debug","msg":"request uri=/api/v1/mine/login middleware Casbin 不验证权限","source":"context.go:161:gin.(*Context).Next","time":"2020-08-05T10:38:17+08:00"}
+{"level":"info","msg":"sqlC:/oben/project/backstage/repository/product.go:31311.9673msSELECT * FROM `bs_product`  WHERE (`bs_product`.`id` = 5) ORDER BY `bs_product`.`id` ASC LIMIT 1[] 1","source":"scope.go:1047:gorm.(*Scope).trace","time":"2020-08-05T10:38:17+08:00"}
+{"level":"info","msg":"sqlC:/oben/project/backstage/repository/product.go:31322.9414msSELECT * FROM `bs_scene`  WHERE (`id` IN (?)) ORDER BY `bs_scene`.`id` ASC[1] 1","source":"scope.go:1047:gorm.(*Scope).trace","time":"2020-08-05T10:38:17+08:00"}
+{"level":"info","msg":"sqlC:/oben/project/backstage/repository/product.go:31321.9411msSELECT * FROM `bs_model`  WHERE (`id` IN (?)) ORDER BY `bs_model`.`id` ASC[1] 1","source":"scope.go:1047:gorm.(*Scope).trace","time":"2020-08-05T10:38:17+08:00"}
+{"level":"info","msg":"sqlC:/oben/project/backstage/repository/product.go:31321.943msSELECT * FROM `bs_clothing`  WHERE (`id` IN (?)) ORDER BY `bs_clothing`.`id` ASC[1] 1","source":"scope.go:1047:gorm.(*Scope).trace","time":"2020-08-05T10:38:17+08:00"}
+{"level":"debug","msg":"=============={BsProduct:{AuditStatus:1 AuditorID:1 ClothingID:1 CreatedAt:1970-01-01 00:00:00 +0800 CST CreatorID:1 DepartmentID:1 ID:5 ModelID:1 Name:name OperateType:1 OperatorID:1 OrganizationID:1 PreAuditStatus:1 PrePublishedAt:2020-07-31 10:47:11 +0800 CST PublishedAt:2020-07-31 10:47:10 +0800 CST SceneID:1 UpdatedAt:2020-07-31 10:47:06 +0800 CST PreClothingID:2 PreModelID:2 PreName:name PreSceneID:2 ProductStatus:1} Scene:{Contract:15689923333 CreatedAt:2020-07-31 10:59:19 +0800 CST Description:ddesc Email:ooben@.com ID:1 Image:iimage Name:草原 ShowStatus:1 Status:1 Type:1 UpdatedAt:2020-07-31 12:26:14 +0800 CST OrganizationID:0} Model:{Contract:13333333333 CreatedAt:2020-07-31 10:51:43 +0800 CST Description:desc Email:oben@123 ID:1 Image:iimage Name:秒秒 ShowStatus:1 Status:1 UpdatedAt:2020-07-31 10:51:45 +0800 CST OrganizationID:0} Clothing:{Contract:13333333333 CreatedAt:2020-07-31 10:52:28 +0800 CST Description:好看的连衣裙 Email:oben@com ID:1 Image:image Name:连衣裙 Status:1 ShowStatus:1 UpdatedAt:2020-07-31 10:52:32 +0800 CST OrganizationID:0}}============","source":"mine.go:82:service.(*mineService).Login","time":"2020-08-05T10:38:17+08:00"}
+{"level":"debug","msg":"productEx=\u0026{BsProduct:{AuditStatus:1 AuditorID:1 ClothingID:1 CreatedAt:1970-01-01 00:00:00 +0800 CST CreatorID:1 DepartmentID:1 ID:5 ModelID:1 Name:name OperateType:1 OperatorID:1 OrganizationID:1 PreAuditStatus:1 PrePublishedAt:2020-07-31 10:47:11 +0800 CST PublishedAt:2020-07-31 10:47:10 +0800 CST SceneID:1 UpdatedAt:2020-07-31 10:47:06 +0800 CST PreClothingID:2 PreModelID:2 PreName:name PreSceneID:2 ProductStatus:1} Scene:{Contract:15689923333 CreatedAt:2020-07-31 10:59:19 +0800 CST Description:ddesc Email:ooben@.com ID:1 Image:iimage Name:草原 ShowStatus:1 Status:1 Type:1 UpdatedAt:2020-07-31 12:26:14 +0800 CST OrganizationID:0} Model:{Contract:13333333333 CreatedAt:2020-07-31 10:51:43 +0800 CST Description:desc Email:oben@123 ID:1 Image:iimage Name:秒秒 ShowStatus:1 Status:1 UpdatedAt:2020-07-31 10:51:45 +0800 CST OrganizationID:0} Clothing:{Contract:13333333333 CreatedAt:2020-07-31 10:52:28 +0800 CST Description:好看的连衣裙 Email:oben@com ID:1 Image:image Name:连衣裙 Status:1 ShowStatus:1 UpdatedAt:2020-07-31 10:52:32 +0800 CST OrganizationID:0}}","source":"mine.go:78:handler.(*mineHandler).Login.func1","time":"2020-08-05T10:38:17+08:00"}
+
+
+
+{"level":"info","msg":"sqlC:/oben/project/backstage/repository/product.go:31311.9673msSELECT * FROM `bs_product`  WHERE (`bs_product`.`id` = 5) ORDER BY `bs_product`.`id` ASC LIMIT 1[] 1","source":"scope.go:1047:gorm.(*Scope).trace","time":"2020-08-05T10:38:17+08:00"}
+{"level":"info","msg":"sqlC:/oben/project/backstage/repository/product.go:31322.9414msSELECT * FROM `bs_scene`  WHERE (`id` IN (?)) ORDER BY `bs_scene`.`id` ASC[1] 1","source":"scope.go:1047:gorm.(*Scope).trace","time":"2020-08-05T10:38:17+08:00"}
+{"level":"info","msg":"sqlC:/oben/project/backstage/repository/product.go:31321.9411msSELECT * FROM `bs_model`  WHERE (`id` IN (?)) ORDER BY `bs_model`.`id` ASC[1] 1","source":"scope.go:1047:gorm.(*Scope).trace","time":"2020-08-05T10:38:17+08:00"}
+{"level":"info","msg":"sqlC:/oben/project/backstage/repository/product.go:31321.943msSELECT * FROM `bs_clothing`  WHERE (`id` IN (?)) ORDER BY `bs_clothing`.`id` ASC[1] 1","source":"scope.go:1047:gorm.(*Scope).trace","time":"2020-08-05T10:38:17+08:00"}
+{"level":"debug","msg":"=============={BsProduct:{AuditStatus:1 AuditorID:1 ClothingID:1 CreatedAt:1970-01-01 00:00:00 +0800 CST CreatorID:1 DepartmentID:1 ID:5 ModelID:1 Name:name OperateType:1 OperatorID:1 OrganizationID:1 PreAuditStatus:1 PrePublishedAt:2020-07-31 10:47:11 +0800 CST PublishedAt:2020-07-31 10:47:10 +0800 CST SceneID:1 UpdatedAt:2020-07-31 10:47:06 +0800 CST PreClothingID:2 PreModelID:2 PreName:name PreSceneID:2 ProductStatus:1} Scene:{Contract:15689923333 CreatedAt:2020-07-31 10:59:19 +0800 CST Description:ddesc Email:ooben@.com ID:1 Image:iimage Name:草原 ShowStatus:1 Status:1 Type:1 UpdatedAt:2020-07-31 12:26:14 +0800 CST OrganizationID:0} Model:{Contract:13333333333 CreatedAt:2020-07-31 10:51:43 +0800 CST Description:desc Email:oben@123 ID:1 Image:iimage Name:秒秒 ShowStatus:1 Status:1 UpdatedAt:2020-07-31 10:51:45 +0800 CST OrganizationID:0} Clothing:{Contract:13333333333 CreatedAt:2020-07-31 10:52:28 +0800 CST Description:好看的连衣裙 Email:oben@com ID:1 Image:image Name:连衣裙 Status:1 ShowStatus:1 UpdatedAt:2020-07-31 10:52:32 +0800 CST OrganizationID:0}}============","source":"mine.go:82:service.(*mineService).Login","time":"2020-08-05T10:38:17+08:00"}
+
+
+
+
+
+mysql> select * from bs_product where id=5;
++----+-----------------+---------------+------+----------+-------------+----------+----------------+------------------+--------------+------------+-------------+------------+---------------------+---------------------+---------------------+---------------------+--------------+--------------+--------------+-----------------+----------+
+| id | organization_id | department_id | name | model_id | clothing_id | scene_id | product_status | pre_audit_status | operate_type | creator_id | operator_id | auditor_id | created_at          | updated_at          | published_at        | pre_published_at    | audit_status | pre_model_id | pre_scene_id | pre_clothing_id | pre_name |
++----+-----------------+---------------+------+----------+-------------+----------+----------------+------------------+--------------+------------+-------------+------------+---------------------+---------------------+---------------------+---------------------+--------------+--------------+--------------+-----------------+----------+
+|  5 |               1 |             1 | name |        1 |           1 |        1 |              1 |                1 |            1 |          1 |           1 |          1 | 1970-01-01 00:00:00 | 2020-07-31 10:47:06 | 2020-07-31 10:47:10 | 2020-07-31 10:47:11 |            1 |            2 |            2 |               2 | name     |
++----+-----------------+---------------+------+----------+-------------+----------+----------------+------------------+--------------+------------+-------------+------------+---------------------+---------------------+---------------------+---------------------+--------------+--------------+--------------+-----------------+----------+
+1 row in set (0.00 sec)
+mysql>
+
+
+productEx,err := repository.BsProductRepo.Get(5)
+
+productEx=\u0026
+{
+    BsProduct:{
+        AuditStatus:1
+        AuditorID:1
+        ClothingID:1
+        CreatedAt:1970-01-01 00:00:00 +0800 CST
+        CreatorID:1
+        DepartmentID:1
+        ID:5
+        ModelID:1
+        Name:name
+        OperateType:1
+        OperatorID:1
+        OrganizationID:1
+        PreAuditStatus:1
+        PrePublishedAt:2020-07-31 10:47:11 +0800 CST
+        PublishedAt:2020-07-31 10:47:10 +0800 CST SceneID:1
+        UpdatedAt:2020-07-31 10:47:06 +0800 CST
+        PreClothingID:2
+        PreModelID:2
+        PreName:name
+        PreSceneID:2
+        ProductStatus:1
+    }
+    Scene:{
+        Contract:15689923333
+        CreatedAt:2020-07-31 10:59:19 +0800 CST
+        Description:ddesc
+        Email:ooben@.com
+        ID:1
+        Image:iimage
+        Name:草原
+        ShowStatus:1
+        Status:1
+        Type:1
+        UpdatedAt:2020-07-31 12:26:14 +0800 CST
+        OrganizationID:0
+    }
+    Model:{
+        Contract:13333333333
+        CreatedAt:2020-07-31 10:51:43 +0800 CST
+        Description:desc
+        Email:oben@123
+        ID:1
+        Image:iimage
+        Name:秒秒
+        ShowStatus:1
+        Status:1
+        UpdatedAt:2020-07-31 10:51:45 +0800 CST
+        OrganizationID:0
+    }
+    Clothing:{
+        Contract:13333333333
+        CreatedAt:2020-07-31 10:52:28 +0800 CST
+        Description:好看的连衣裙
+        Email:oben@com
+        ID:1
+        Image:image
+        Name:连衣裙
+        Status:1
+        ShowStatus:1
+        UpdatedAt:2020-07-31 10:52:32 +0800 CST
+        OrganizationID:0
+    }
+}
